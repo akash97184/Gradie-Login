@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper{
+    width:100vw;
+    height: 100vh;
+    background-color: #FBDA61;
+    background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    width: 55%;
+    height: 70%;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+}
+
+.left{
+    width: 50%;
+    height: 100%;
+    background:rgba(38, 38, 57, 0.959);
+    display: flex;
+    flex-direction: column;
+    border-radius:20px 0 0 20px;
+    position: relative;
+}
+
+.text {
+    width: 100%;
+    height:20%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.text > h1 {
+    margin-top:2.5rem;
+    font-weight:700;
+}
+.text > p {
+    margin-top:0.3rem;
+    margin-bottom:0.4rem;
+    font-weight:300;
+    color:rgb(52, 164, 205);
+}
+
+.img-container {
+    width: 400px;
+    height: 500px;
+}
+img {
+    width:100%;
+    height:100%;
+    position: absolute;
+    bottom:0;
+    object-fit: contain;
+}
+
+.right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:1.2rem;
+    padding:40px 50px 40px 50px;
+}
+
+.right > h2 {
+    font-size:2.1rem;
+    font-weight: bold;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
+
+.label{
+    font-size: medium;
+    font-weight:bolder;
+    cursor:pointer;
+    display:inline-block;
+    width: 20%;
+}
+.label+input {
+    width: 100%;
+    height: 3.2rem;
+    border-radius: 5px;
+    border: 1px solid rgb(76, 81, 81);
+    padding:10px;
+}
+
+.check {
+    display: flex;
+    gap:0.3rem;
+    justify-content: baseline;
+}
+.check > input {
+    width: 1.4rem;
+    height: 1.4rem;
+    cursor:pointer;
+    accent-color:rgb(52, 164, 205);
+}
+.check > label {
+    font-size: medium;
+    cursor:pointer;
+}
+
+button {
+    width: 100%;
+    height: 3.2rem;
+    background-color:rgba(38, 38, 57, 0.959);
+    border:none;
+    font-size: 1rem;
+    color:white;
+    font-weight: bold;
+    margin-top: 0.6rem;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+/* Styles for tablet devices */
+@media (max-width: 768px) {
+    .container {
+        width: 70%;
+        flex-direction: column;
+        height: 80%;
+    }
+    
+    .left {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        border-radius: 20px 20px 0 0;
+    }  
+    .right {
+        width: 100%;
+        padding:2.5rem  4rem;
+    }
+    
+    .right > h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Styles for mobile devices */
+@media (max-width: 480px) {
+    
+    .container {
+        width: 100vw;
+        height: 100vh;
+        border-radius: unset;
+    }
+    
+    .left {
+        width: 100%;
+        height: 60%;
+        border-radius: unset;
+    }
+
+    .text > h1{ 
+        margin-top:1.5rem;
+    }    
+    .right {
+        width: 100%;
+        height:auto;
+        padding: 3rem;
+    }
+    
+    .right > h2 {
+        font-size: 1.6rem;
+    }
+    
+    .label {
+        width: 30%;
+    }
+}
